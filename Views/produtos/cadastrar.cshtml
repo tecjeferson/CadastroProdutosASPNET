@@ -1,0 +1,22 @@
+@model CadastroProduto.Models.Produto
+
+<div class="row">
+    <div class="col">
+        <h2>Novo Produto</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <form class="form-group" asp-controller="Produtos" asp-action="Salvar" method="POST">
+            <input type="text" class="form-control" asp-for="Nome" placeholder="Nome"><br>
+            <input type="text" class="form-control" asp-for="Modelo" placeholder="Modelo"><br>
+            <input type="number" class="form-control" asp-for="Quantidade" placeholder="Quantidade"><br>
+            <select class="form-control" asp-for="Estado">
+                <option value="true">Funcionando</option>
+                <option value="false">Com defeito</option>
+            </select><br>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+</div>
